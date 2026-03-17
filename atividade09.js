@@ -13,7 +13,7 @@ rl.question("Se você fosse resumir sua vida em uma frase, qual seria?\n", (fras
 
     const fraseTamanho = frase.length
 
-    console.log(`Essa frasem tem ${fraseTamanho} caracteres contando o espaço.`)
+    console.log(`Essa frase tem ${fraseTamanho} caracteres contando o espaço.`)
 
     const fraseTamSemEspaco = frase.replaceAll(" ", "").length
 
