@@ -22,6 +22,66 @@ const listaDeProdutos = []
 
 let sair = true
 
+let i = 3
+
+function cadastroProduto() {
+
+    if(listaDeProdutos.length < i) {
+
+        console.log("Seja bem vindo ao sistema de cadastro de produtos!\n")
+
+        rl.question("Informe o nome do produto: ", (input) => {
+
+            let nome = input
+            
+
+            rl.question("Informe o preço do produto: ", (input2) => {
+
+                let preco = input2
+
+                rl.question("Informe a quantidade que está entrando em estoque: ", (input3) => {
+
+                    let estoque = input3
+
+                    let objetoCadastro = {
+
+                    nome : nome,
+                    preco : preco,
+                    estoque : estoque
+
+                    }
+
+                    listaDeProdutos.push(objetoCadastro)
+
+
+                    cadastroProduto()
+
+                })
+
+            })
+
+        })
+
+    } else {
+
+        console.log("Seus produtos em estoque são: ")
+
+        
+        listaDeProdutos.forEach(produto => 
+            
+            console.log(`Estoque: ${produto.nome} | ${produto.preco} | ${produto.estoque}`))
+
+            rl.close()
+
+        }
+
+        
+
+
+}
+
+cadastroProduto()
+
 
 
 /* while(sair === true){
