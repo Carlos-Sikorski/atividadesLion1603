@@ -10,6 +10,8 @@ const rl = readline.createInterface({
 
 });
 
+// aijosdasdioasd
+
 rl.question("Você gota do seu café preto e sem açúcar?\n", (cfInput) => {
     
     const cafeGood = cfInput.toLowerCase()
